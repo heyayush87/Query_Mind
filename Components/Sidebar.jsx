@@ -2,8 +2,8 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useState } from "react";
 import { useClerk, UserButton } from "@clerk/nextjs";
-import { useAppContext } from "@/context/AppContext";
-import ChatLabel from "./ChatLabel";
+import { useAppContext } from "@/Context/AppContext";
+import Chatlabel from "./Chatlabel";
 
 const Sidebar = ({ expand, setExpand }) => {
   const { openSignIn } = useClerk();

@@ -1,5 +1,5 @@
 import { assets } from "@/assets/assets";
-import { useAppContext } from "@/context/AppContext";
+import { useAppContext } from "@/Context/AppContext";
 import axios from "axios";
 import Image from "next/image";
 import React from "react";
