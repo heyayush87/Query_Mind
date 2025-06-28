@@ -1,7 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
-import {AppContextProvider} from "@/Context/AppContext"
+import { AppContextProvider } from "@/Context/AppContext"
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -19,14 +20,13 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
       <AppContextProvider>
-    <html lang="en">
-      <body
-        className={`${inter.className}  antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-    </AppContextProvider>
+        <html lang="en">
+          <body className={`${inter.className}  antialiased`}>
+            <Toaster position="top-right" />
+            {children}
+          </body>
+        </html>
+      </AppContextProvider>
     </ClerkProvider>
   );
 }

@@ -4,6 +4,7 @@ import PromptBox from "@/Components/PromptBox";
 import Sidebar from "@/Components/Sidebar";
 import Image from "next/image";
 import { useState } from "react";
+import {Message} from "@/Components/Message"
 
 export default function Home() {
   const [expand, setExpand] = useState(false);
@@ -26,7 +27,9 @@ export default function Home() {
               <p>Hi , I'm QueryMind AI</p>
             </div>
              <p className="text-sm mt-2">How Can I help you ?</p>
-          </>) : (<div></div>)}
+          </>) : (<div>
+              <Message role="user" message="what is next.js"/>
+          </div>)}
           <PromptBox isLoading={isloading} setisloading={setisloading} />
           <p className="text-xs absolute bottom-1 text-gray-500"> AI-generated , for reference Only</p>
         </div>
