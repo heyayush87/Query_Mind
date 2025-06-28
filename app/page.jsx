@@ -4,7 +4,7 @@ import PromptBox from "@/Components/PromptBox";
 import Sidebar from "@/Components/Sidebar";
 import Image from "next/image";
 import { useState } from "react";
-import {Message} from "@/Components/Message"
+import Message from "@/Components/Message"
 
 export default function Home() {
   const [expand, setExpand] = useState(false);
